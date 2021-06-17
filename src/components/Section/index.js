@@ -1,47 +1,16 @@
-import React from 'react';
-
-import {
-  RecipeListContainer,
-  RecipeContainer,
-  CoverImage,
-  RecipeName,
-  IngredientsText,
-  SeeMoreText
-} from './style';
+import React, { useContext } from 'react';
+import { RecipeContext } from '../../context/RecipeContext';
+import RecipeComponent from './RecipeComponent';
+import { RecipeListContainer, Placeholder } from './style';
 
 export default function Section() {
+  const { recipeList } = useContext(RecipeContext);
+
   return (
     <RecipeListContainer>
-      <RecipeContainer>
-        <CoverImage src="hamburger.svg" alt="" />
-        <RecipeName>Mattar Paneer</RecipeName>
-        <IngredientsText>Ingredients</IngredientsText>
-        <SeeMoreText>See Complete Recipe</SeeMoreText>
-      </RecipeContainer>
-      <RecipeContainer>
-        <CoverImage src="hamburger.svg" alt="" />
-        <RecipeName>Mattar Paneer</RecipeName>
-        <IngredientsText>Ingredients</IngredientsText>
-        <SeeMoreText>See Complete Recipe</SeeMoreText>
-      </RecipeContainer>
-      <RecipeContainer>
-        <CoverImage src="hamburger.svg" alt="" />
-        <RecipeName>Mattar Paneer</RecipeName>
-        <IngredientsText>Ingredients</IngredientsText>
-        <SeeMoreText>See Complete Recipe</SeeMoreText>
-      </RecipeContainer>
-      <RecipeContainer>
-        <CoverImage src="hamburger.svg" alt="" />
-        <RecipeName>Mattar Paneer</RecipeName>
-        <IngredientsText>Ingredients</IngredientsText>
-        <SeeMoreText>See Complete Recipe</SeeMoreText>
-      </RecipeContainer>
-      <RecipeContainer>
-        <CoverImage src="hamburger.svg" alt="" />
-        <RecipeName>Mattar Paneer</RecipeName>
-        <IngredientsText>Ingredients</IngredientsText>
-        <SeeMoreText>See Complete Recipe</SeeMoreText>
-      </RecipeContainer>
+      {recipeList.length ? recipeList.map((recipeObj) => (
+        <RecipeComponent recipeObj={recipeObj.recipe} key={Math.random()}/>
+      )) : <Placeholder src="hamburger.svg"/>}
     </RecipeListContainer>
   );
 }

@@ -20,6 +20,7 @@ export const RecipeContainer = styled.div`
 
 export const CoverImage = styled.img`
   height: 200px;
+  object-fit: cover;
 `;
 
 export const RecipeName = styled.span`
@@ -46,4 +47,11 @@ export const IngredientsText = styled.span`
 export const SeeMoreText = styled(IngredientsText)`
   color: #f57e80;
   border: solid 3px #f57e80;
+`;
+
+export const Placeholder = styled.img`
+  width: 120px;
+  height: 120px;
+  margin: 200px;
+  opacity: 50%;
 `;
