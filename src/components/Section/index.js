@@ -10,7 +10,7 @@ export default function Section() {
     <RecipeListContainer>
       {recipeList.length ? recipeList.map((recipeObj) => (
         <RecipeComponent recipeObj={recipeObj.recipe} key={Math.random()}/>
-      )) : <Placeholder src="hamburger.svg"/>}
+      )) : <Placeholder src="food.svg"/>}
     </RecipeListContainer>
   );
 }

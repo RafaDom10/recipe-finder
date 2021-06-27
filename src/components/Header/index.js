@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <StyledHeader>
       <AppNameComponent>
-        <AppIcon src="hamburger.svg" alt="hamburger icon" />
+        <AppIcon src="chef-hat.svg" alt="hamburger icon" />
         Recipe Finder
       </AppNameComponent>
       <SearchComponent>

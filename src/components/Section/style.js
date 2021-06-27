@@ -50,8 +50,8 @@ export const SeeMoreText = styled(IngredientsText)`
 `;
 
 export const Placeholder = styled.img`
-  width: 120px;
-  height: 120px;
-  margin: 200px;
+  width: 350px;
+  height: 350px;
+  margin: 90px;
   opacity: 50%;
 `;

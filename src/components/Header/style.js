@@ -19,8 +19,8 @@ export const AppNameComponent = styled.div`
 `;
 
 export const AppIcon = styled.img`
-  width: 36px;
-  height: 36px;
+  width: 66px;
+  height: 66px;
   margin: 15px;
 `;
 

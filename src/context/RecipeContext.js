@@ -4,8 +4,8 @@ import Axios from 'axios';
 
 export const RecipeContext = createContext();
 
-const APP_ID = 'a6dd6d82';
-const APP_KEY = '4ba272c8356da61c453955f09e090ad7';
+const APP_ID = process.env.REACT_APP_ID;
+const APP_KEY = process.env.REACT_APP_KEY;
 
 export function RecipeProvider(props) {
   const [timeoutId, updateTimeoutId] = useState();
